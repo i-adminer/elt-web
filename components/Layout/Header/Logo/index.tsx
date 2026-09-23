@@ -6,7 +6,7 @@ const Logo: React.FC = () => {
     <TransitionLink href="/" label="Home" className="block">
       <Image
         src="/logo/logo.png"
-        alt="Desgy Solutions"
+        alt="EasyLink Technologies"
         width={150}
         height={50}
         className="h-auto w-auto max-h-12"

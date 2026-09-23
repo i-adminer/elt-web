@@ -1,4 +1,12 @@
 import React from 'react'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Terms & Conditions',
+  description: 'EasyLink Technologies Terms & Conditions — service agreements, payment terms, and governing law for ICT support services in Kenya.',
+  alternates: { canonical: 'https://www.easylink.co.ke/terms' },
+  robots: { index: false, follow: false },
+}
 
 export default function TermsPage() {
   return (

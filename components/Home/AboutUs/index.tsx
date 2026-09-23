@@ -1,10 +1,10 @@
 'use client'
 import { useEffect, useState } from 'react'
 import { aboutdata } from '@/types/aboutdata'
-import Link from 'next/link'
 import Image from 'next/image'
 import { Icon } from '@iconify/react'
 import AboutSkeleton from '../../Skeleton/AboutUs'
+import { TransitionLink } from '@/components/Transitions/TransitionLink'
 
 const Aboutus = () => {
   // fetch about data
@@ -64,8 +64,9 @@ const Aboutus = () => {
                     <p className='text-lg font-normal text-black group-hover:text-white mb-5'>
                       {item.paragraph}
                     </p>
-                    <Link
-                      href='#'
+                    <TransitionLink
+                      href={item.href || '/'}
+                      label={item.link}
                       className='text-18 font-semibold text-accent group-hover:text-white hover-underline flex items-center transition-colors duration-300'>
                       {item.link}
                       <Icon
@@ -73,7 +74,7 @@ const Aboutus = () => {
                         width='20'
                         height='20'
                       />
-                    </Link>
+                    </TransitionLink>
                   </div>
                 ))}
           </div>

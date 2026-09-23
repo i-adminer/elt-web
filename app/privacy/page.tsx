@@ -1,4 +1,12 @@
 import React from 'react'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Privacy Policy',
+  description: 'EasyLink Technologies Privacy Policy — how we collect, use, and protect your personal information.',
+  alternates: { canonical: 'https://www.easylink.co.ke/privacy' },
+  robots: { index: false, follow: false },
+}
 
 export default function PrivacyPage() {
   return (

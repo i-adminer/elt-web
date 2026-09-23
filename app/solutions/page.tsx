@@ -5,6 +5,8 @@ import { SOLUTIONS } from '@/data/solutions'
 import { TransitionLink } from '@/components/Transitions/TransitionLink'
 import { FaArrowRight } from 'react-icons/fa6'
 
+export const dynamic = 'force-static'
+
 export default function SolutionsPage() {
   return (
     <main className='bg-white'>

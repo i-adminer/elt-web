@@ -13,7 +13,17 @@ import Insta from "@/components/Home/Insta";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Easylink Technologies | Outsourcing Managed IT Services",
+  title: "Home",
+  description:
+    "EasyLink Technologies — East Africa's trusted ICT support partner. 24/7 managed IT services, helpdesk support, cloud solutions, and data protection for businesses in Kenya and beyond.",
+  alternates: { canonical: "https://www.easylink.co.ke" },
+  openGraph: {
+    title: "EasyLink Technologies | ICT Support Services East Africa",
+    description:
+      "24/7 managed IT services, helpdesk support, cloud solutions, and data protection for businesses in East Africa.",
+    url: "https://www.easylink.co.ke",
+    images: [{ url: "/images/og-image.png", width: 1200, height: 630 }],
+  },
 };
 
 export default function Home() {

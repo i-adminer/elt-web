@@ -1,7 +1,7 @@
 import { Documentation } from '@/components/Documentation/Documentation'
 import { Metadata } from 'next'
 export const metadata: Metadata = {
-  title: 'Featurs | Desgy',
+  title: 'Documentation | EasyLink Technologies',
 }
 
 export default function Page() {

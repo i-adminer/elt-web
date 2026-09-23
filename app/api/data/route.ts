@@ -35,6 +35,7 @@ const Aboutdata: aboutdata[] = [
     paragraph:
       'A recognized leader providing 24/7 IT Support and staff augmentation services to small and medium businesses across East Africa.',
     link: 'Learn more',
+    href: '/about',
   },
   {
     heading: 'Our Services',
@@ -42,6 +43,7 @@ const Aboutdata: aboutdata[] = [
     paragraph:
       'From Managed ICT Services to Cloud Solutions and Helpdesk Support, we provide comprehensive ICT solutions tailored to your business needs.',
     link: 'View Solutions',
+    href: '/solutions',
   },
   {
     heading: 'Our Approach',
@@ -49,6 +51,7 @@ const Aboutdata: aboutdata[] = [
     paragraph:
       'We combine customization, professionalism, and care to deliver reliable technical assistance that helps your business grow.',
     link: 'Contact Us',
+    href: '/contact',
   },
 ]
 
