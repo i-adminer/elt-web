@@ -375,7 +375,7 @@ export default function AboutPage() {
               <div className="relative rounded-3xl overflow-hidden shadow-xl">
                 <Image
                   src="/images/founder/ceo.png"
-                  alt="Ephraim John — Founder & CIO"
+                  alt="Mr. Ephraim John — Founder & CIO"
                   width={560}
                   height={600}
                   className="w-full h-auto object-cover"
@@ -410,7 +410,7 @@ export default function AboutPage() {
                 &ldquo;Dedicated to ICT excellence.&rdquo;
               </blockquote>
               <p className="text-gray-600 text-lg leading-relaxed mb-4">
-                Ephraim John founded EasyLink Technologies with a clear
+                Mr. Ephraim John founded EasyLink Technologies with a clear
                 conviction: every business, regardless of size, deserves access
                 to reliable, professional IT support. With over two decades of
                 experience spanning cybersecurity, data protection, network

@@ -19,7 +19,7 @@ const Dedicated = () => {
             <div className='relative max-w-md mx-auto lg:max-w-none'>
               <Image
                 src='/images/founder/ceo.png'
-                alt='Ephraim John - Founder & CIO'
+                alt='Mr. Ephraim John - Founder & CIO'
                 width={500}
                 height={600}
                 className='mx-auto md:mx-0 rounded-2xl md:rounded-3xl shadow-2xl w-full h-auto'
@@ -40,14 +40,14 @@ const Dedicated = () => {
               />
             </div>
             <h2 className='text-center lg:text-start lg:leading-20 leading-tight text-3xl md:text-4xl'>
-              "Dedicated to ICT excellence."
+              &ldquo;Dedicated to ICT excellence.&rdquo;
             </h2>
             <p className='text-lg md:text-xl font-medium text-black/55 mt-4 md:mt-5 text-center lg:text-start'>
               With extensive expertise in information technology, cybersecurity, and data protection, we are committed to providing reliable ICT solutions that empower businesses across East Africa to thrive in the digital age.
             </p>
             <div className='mt-8 md:mt-12'>
               <h5 className='lg:pl-32 relative lg:before:block before:hidden before:absolute before:bg-primary before:h-0.5 before:w-24 before:left-0 before:bottom-1/2 text-center lg:text-start font-bold text-black text-xl'>
-                Ephraim John
+                Mr. Ephraim John
               </h5>
               <p className='text-base md:text-lg text-primary font-semibold mt-2 lg:pl-32 text-center lg:text-start'>
                 Founder & CIO
