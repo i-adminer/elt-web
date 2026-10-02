@@ -103,8 +103,7 @@ export default function SolutionsPage() {
             </TransitionLink>
             <a href='https://easylinktechnologies.freshdesk.com/support/home'
               target='_blank' rel='noopener noreferrer'
-              className='inline-flex items-center gap-2 rounded-full border-2 px-8 py-4 text-base font-semibold transition-all hover:text-white'
-              style={{ borderColor: 'var(--color-primary)', color: 'var(--color-primary)' }}>
+              className='hidden'>
               Raise a Ticket
             </a>
           </div>

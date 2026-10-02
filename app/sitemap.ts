@@ -71,6 +71,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.85,
     },
+    {
+      url: `${BASE_URL}/solutions/zoho`,
+      lastModified: now,
+      changeFrequency: 'monthly',
+      priority: 0.85,
+    },
 
     // Legal — low priority, no-index anyway
     {

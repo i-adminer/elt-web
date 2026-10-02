@@ -2,6 +2,7 @@ import React from "react";
 import Hero from "@/components/Home/Hero";
 import Aboutus from "@/components/Home/AboutUs";
 import Partners from "@/components/Home/Partners";
+import ZohoSection from "@/components/Home/ZohoSection";
 import Dedicated from "@/components/Home/Dedicated";
 import Beliefs from "@/components/Home/Beliefs";
 import Team from "@/components/Home/Team";
@@ -15,7 +16,7 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Home",
   description:
-    "EasyLink Technologies — East Africa's trusted ICT support partner. 24/7 managed IT services, helpdesk support, cloud solutions, and data protection for businesses in Kenya and beyond.",
+    "EasyLink Technologies — East Africa's trusted ICT support partner. 24/7 managed IT services, helpdesk support, cloud solutions, data protection, and Zoho business solutions for businesses in Kenya and beyond.",
   alternates: { canonical: "https://www.easylink.co.ke" },
   openGraph: {
     title: "EasyLink Technologies | ICT Support Services East Africa",
@@ -32,6 +33,7 @@ export default function Home() {
       <Hero />
       <Aboutus />
       <Partners />
+      <ZohoSection />
       <Beliefs />
       <Dedicated />
       <Team />

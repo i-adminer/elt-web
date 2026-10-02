@@ -116,11 +116,7 @@ export default function AboutPage() {
                   href="https://easylinktechnologies.freshdesk.com/support/home"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 rounded-full border-2 px-7 py-4 text-sm font-semibold transition-all hover:text-white"
-                  style={{
-                    borderColor: "var(--color-primary)",
-                    color: "var(--color-primary)",
-                  }}
+                  className="hidden"
                 >
                   <FaTicketAlt size={13} /> Raise a Ticket
                 </a>
@@ -459,7 +455,7 @@ export default function AboutPage() {
               href="https://easylinktechnologies.freshdesk.com/support/home"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border-2 border-white/40 px-8 py-4 text-base font-semibold text-white transition-all hover:border-white hover:bg-white/10"
+              className="hidden"
             >
               <FaTicketAlt size={14} /> Raise a Ticket
             </a>

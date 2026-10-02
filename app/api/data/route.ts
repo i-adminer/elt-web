@@ -22,6 +22,7 @@ const headerData: HeaderItem[] = [
       { label: 'Cloud Solutions', href: '/solutions/cloud-solutions' },
       { label: 'Data Protection', href: '/solutions/data-protection' },
       { label: 'IT Outsourcing', href: '/solutions/it-outsourcing' },
+      { label: 'Zoho Solutions', href: '/solutions/zoho' },
     ]
   },
   { label: 'Contact Us', href: '/contact' },
@@ -273,6 +274,7 @@ const FooterLinksData: footerlinks[] = [
       { label: 'Cloud Solutions', href: '/solutions/cloud-solutions' },
       { label: 'Data Protection', href: '/solutions/data-protection' },
       { label: 'IT Outsourcing', href: '/solutions/it-outsourcing' },
+      { label: 'Zoho Solutions', href: '/solutions/zoho' },
     ],
   },
   {
@@ -285,7 +287,6 @@ const FooterLinksData: footerlinks[] = [
   {
     section: 'Support',
     links: [
-      { label: 'Raise a Ticket', href: 'https://easylink.freshdesk.com' },
       { label: 'Work with Us', href: '/contact' },
     ],
   },

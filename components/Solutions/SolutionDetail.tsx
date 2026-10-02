@@ -165,7 +165,7 @@ export function SolutionDetail({ solution }: { solution: Solution }) {
                   </TransitionLink>
                   <a href='https://easylinktechnologies.freshdesk.com/support/home'
                     target='_blank' rel='noopener noreferrer'
-                    className='inline-flex items-center justify-center gap-2 rounded-full border border-white/30 px-5 py-3 text-sm font-semibold text-white transition-all hover:bg-white/10'>
+                    className='hidden'>
                     <FaTicketAlt size={11} /> Raise a Ticket
                   </a>
                 </div>

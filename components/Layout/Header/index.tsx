@@ -95,7 +95,7 @@ const Header: React.FC = () => {
             <Link
               href="https://easylinktechnologies.freshdesk.com/support/home"
               target="_blank"
-              className="hidden lg:block bg-transparent text-darkmode border hover:bg-darkmode border-darkmode hover:text-white px-4 py-2 rounded-lg hover:cursor-pointer transition-colors duration-300"
+              className="hidden"
             >
               Raise a Ticket
             </Link>
@@ -151,7 +151,8 @@ const Header: React.FC = () => {
               <Link
                 href="https://easylinktechnologies.freshdesk.com/support/home"
                 target="_blank"
-                className="bg-transparent border border-black text-black px-4 py-2 rounded-lg hover:bg-black hover:text-white text-center transition-colors duration-300"
+                rel="noopener noreferrer"
+                className="hidden"
                 onClick={() => {
                   setNavbarOpen(false);
                 }}
