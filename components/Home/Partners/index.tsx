@@ -47,7 +47,7 @@ const partners = [
   { name: "Linux", logo: "/images/partners/linux.webp" },
   { name: "Office 365", logo: "/images/partners/office365.webp" },
   { name: "TeamViewer", logo: "/images/partners/teamviewer.webp" },
-  { name: "Zoho", logo: "/images/partners/zoho.webp" },
+  { name: "Zoho Partner", logo: "/zoho/premium-badge-new.avif" },
   { name: "Sophos", logo: "/images/partners/sophos.webp" },
   { name: "Cisco", logo: "/images/partners/cisco.webp" },
   { name: "Microsoft", logo: "/images/partners/microsoft.webp" },

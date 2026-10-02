@@ -15,26 +15,27 @@ export interface ActionResult {
   error?: string;
 }
 
-// Zoho SMTP transporter — created once per cold start
+// Zoho SMTP transporter
+// MAIL_AUTH is the Zoho mailbox used solely for authentication
 function createTransporter() {
-  const user = process.env.MAIL_FROM;
+  const user = process.env.MAIL_AUTH;
   const pass = process.env.ZOHO_APP_PASSWORD;
 
   if (!user || !pass) {
     throw new Error(
-      "MAIL_FROM or ZOHO_APP_PASSWORD environment variable is not set.",
+      "MAIL_AUTH or ZOHO_APP_PASSWORD environment variable is not set.",
     );
   }
 
   return nodemailer.createTransport({
     host: "smtp.zoho.com",
     port: 465,
-    secure: true, // SSL
+    secure: true,
     auth: { user, pass },
   });
 }
 
-// Basic server-side validation
+// Server-side validation
 function validate(data: ContactFormData): string | null {
   if (!data.name.trim()) return "Name is required.";
   if (!data.email.trim()) return "Email is required.";
@@ -49,16 +50,21 @@ function validate(data: ContactFormData): string | null {
 export async function sendContactEmail(
   data: ContactFormData,
 ): Promise<ActionResult> {
-  // Validate
   const validationError = validate(data);
   if (validationError) return { success: false, error: validationError };
 
-  const from = process.env.MAIL_FROM!;
-  const to = process.env.MAIL_FROM!; // deliver to the same mailbox
+  // MAIL_AUTH  — Zoho mailbox for SMTP auth (also the From address — Zoho requires these to match)
+  // MAIL_TO    — where enquiries are delivered (defaults to MAIL_AUTH if not set)
+  const authEmail = process.env.MAIL_AUTH!;
+  const to = process.env.MAIL_TO || authEmail;
 
-  // HTML email body
+  // Zoho requires From === authenticated mailbox — cannot relay on behalf of arbitrary addresses.
+  // We set Reply-To to the visitor so hitting Reply in your inbox goes straight back to them.
+  const fromHeader = `"EasyLink Technologies" <${authEmail}>`;
+  const replyToHeader = `"${data.name}" <${data.email}>`;
+
   const html = `
-    <!DOCTYPE html>
+     <!DOCTYPE html>
     <html lang="en">
     <head><meta charset="UTF-8" /><meta name="viewport" content="width=device-width,initial-scale=1" /></head>
     <body style="margin:0;padding:0;background:#f4f5f6;font-family:Manrope,Arial,sans-serif;">
@@ -139,12 +145,11 @@ export async function sendContactEmail(
     const transporter = createTransporter();
 
     await transporter.sendMail({
-      from: `"EasyLink Technologies" <${from}>`,
+      from: fromHeader,
       to,
-      replyTo: `"${data.name}" <${data.email}>`,
+      replyTo: replyToHeader,
       subject: `[Website Enquiry] ${data.subject}`,
       html,
-      // Plain-text fallback
       text: `New enquiry from ${data.name} <${data.email}>\n\n${data.phone ? `Phone: ${data.phone}\n` : ""}Subject: ${data.subject}\n\n${data.message}`,
     });
 
@@ -159,7 +164,7 @@ export async function sendContactEmail(
   }
 }
 
-// Minimal HTML escape to prevent injection in the email body
+// Minimal HTML escape — prevents injection in the email body
 function escapeHtml(str: string): string {
   return str
     .replace(/&/g, "&amp;")
